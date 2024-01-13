@@ -18,6 +18,6 @@ The dataset consists of 5 different sequences from two patients. The sequences h
 
 Subsequent images have a temporal contiguity as they are sampled uniformly from videos. To reduce inter-frame correlation, images were extracted from the original videos only once per second. In the comparative study SEQ4–SEQ6 were not used due to high similarity to SEQ3 and SEQ7 respectively, as they do not offer any additional variance to the dataset. Segmentations have been manually created on a pen display (DTK-2241, K. K. Wacom).
 
-<img src="https://github.com/dataset-ninja/vocalfolds/assets/120389559/237e8a74-61f7-453c-a7b6-a64bb9c9610c" alt="image" width="1000">
+<img src="https://github.com/dataset-ninja/vocalfolds/assets/120389559/237e8a74-61f7-453c-a7b6-a64bb9c9610c" alt="image" width="800">
 
 <span style="font-size: smaller; font-style: italic;">Number of annotated pixels per class in the dataset.</span>
