@@ -1,4 +1,4 @@
-**A Dataset of Laryngeal Endoscopic Images for Semantic Segmentation** is a dataset for a semantic segmentation task. It is used in the medical industry. 
+**A Dataset of Laryngeal Endoscopic Images for Semantic Segmentation** is a dataset for a semantic segmentation task. It is used in the medical and robotics industries. 
 
 The dataset consists of 536 images with 3578 labeled objects belonging to 7 different classes including *vocal folds*, *glottal space*, *other tissue*, and other: *intubation*, *surgical tool*, *void*, and *pathology*.
 

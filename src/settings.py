@@ -23,7 +23,7 @@ HIDE_DATASET = True  # set False when 100% sure about repo quality
 LICENSE: License = License.CC_BY_4_0(
     source_url="https://github.com/imesluh/vocalfolds/blob/master/LICENSE"
 )
-APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Medical()]
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Medical(), Industry.Robotics()]
 CATEGORY: Category = Category.Medical()
 
 CV_TASKS: List[CVTask] = [CVTask.SemanticSegmentation()]
