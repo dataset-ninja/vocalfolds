@@ -10,11 +10,11 @@ The dataset contain 536 manually segmented color images of the larynx during two
 
 The dataset consists of 5 different sequences from two patients. The sequences have following characteristics:
 
-* **SEQ1**: pre-operative with clearly visible tumor on vocal fold, changes in translation, rotation, scale, no instruments visible, without intubation
-* **SEQ2**: pre-operative with clearly visible tumor, visible instruments, changes in translation and scale, with intubation
-* **SEQ3–4**: post-operative with removed tumor, damaged tissue, changes in translation and scale, with intubation
-* **SEQ5–7**: pre-operative with instruments manipulating and grasping the vocal folds, changes in translation and scale, with intubation
-* **SEQ8**: post-operative with blood on vocal folds, instruments and surgical dressing, with intubation
+* ***SEQ1***: pre-operative with clearly visible tumor on vocal fold, changes in translation, rotation, scale, no instruments visible, without intubation
+* ***SEQ2***: pre-operative with clearly visible tumor, visible instruments, changes in translation and scale, with intubation
+* ***SEQ3–4***: post-operative with removed tumor, damaged tissue, changes in translation and scale, with intubation
+* ***SEQ5–7***: pre-operative with instruments manipulating and grasping the vocal folds, changes in translation and scale, with intubation
+* ***SEQ8***: post-operative with blood on vocal folds, instruments and surgical dressing, with intubation
 
 Subsequent images have a temporal contiguity as they are sampled uniformly from videos. To reduce inter-frame correlation, images were extracted from the original videos only once per second. In the comparative study SEQ4–SEQ6 were not used due to high similarity to SEQ3 and SEQ7 respectively, as they do not offer any additional variance to the dataset. Segmentations have been manually created on a pen display (DTK-2241, K. K. Wacom).
 
