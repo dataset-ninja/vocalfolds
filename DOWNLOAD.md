@@ -1,6 +1,6 @@
 Dataset **Laryngeal Endoscopic** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](Set 'HIDE_DATASET=False' to generate download link)
+ [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/e/2/BQ/ZhE4To5xYRVA2nOblmz0YIlsuV8mj0yGD0lixT0OrAAj3nR29VpFleD1jalPCSmH5Pfu7IUGNLw4eSjPttnxWLZJtfp8qoeJC2OJcQbQRuWAfzLJi9dOZQgLJ1Mp.tar)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
