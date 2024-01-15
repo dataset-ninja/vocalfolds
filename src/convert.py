@@ -88,8 +88,9 @@ def convert_and_upload_supervisely_project(
         labels = []
         tags = []
 
-        subfolder_value = int(image_path.split("/")[-2][-1])
-        subfolder = sly.Tag(subfolder_meta, value=subfolder_value)
+        subfolder_value = image_path.split("/")[-2]
+        curr_meta = seq_to_tag[subfolder_value]
+        subfolder = sly.Tag(curr_meta)
         tags.append(subfolder)
 
         patient_value = image_path.split("/")[-3]
@@ -109,22 +110,36 @@ def convert_and_upload_supervisely_project(
             for pixel in unique_pixels:
                 obj_class = pixel_to_class.get(pixel)
                 mask = mask_np == pixel
-                ret, curr_mask = connectedComponents(mask.astype("uint8"), connectivity=8)
-                for i in range(1, ret):
-                    obj_mask = curr_mask == i
-                    curr_bitmap = sly.Bitmap(obj_mask)
-                    if curr_bitmap.area > 20:
-                        curr_label = sly.Label(curr_bitmap, obj_class)
-                        labels.append(curr_label)
+                curr_bitmap = sly.Bitmap(mask)
+                curr_label = sly.Label(curr_bitmap, obj_class)
+                labels.append(curr_label)
 
         return sly.Annotation(img_size=(img_height, img_wight), labels=labels, img_tags=tags)
 
     project = api.project.create(workspace_id, project_name, change_name_if_conflict=True)
 
-    subfolder_meta = sly.TagMeta("seq", sly.TagValueType.ANY_NUMBER)
+    seq1_meta = sly.TagMeta("seq1", sly.TagValueType.NONE)
+    seq2_meta = sly.TagMeta("seq2", sly.TagValueType.NONE)
+    seq3_meta = sly.TagMeta("seq3", sly.TagValueType.NONE)
+    seq4_meta = sly.TagMeta("seq4", sly.TagValueType.NONE)
+    seq5_meta = sly.TagMeta("seq5", sly.TagValueType.NONE)
+    seq6_meta = sly.TagMeta("seq6", sly.TagValueType.NONE)
+    seq7_meta = sly.TagMeta("seq7", sly.TagValueType.NONE)
+    seq8_meta = sly.TagMeta("seq8", sly.TagValueType.NONE)
     patient1_meta = sly.TagMeta("patient 1", sly.TagValueType.NONE)
     patient2_meta = sly.TagMeta("patient 2", sly.TagValueType.NONE)
     patient_to_meta = {"patient1": patient1_meta, "patient2": patient2_meta}
+
+    seq_to_tag = {
+        "seq1": seq1_meta,
+        "seq2": seq2_meta,
+        "seq3": seq3_meta,
+        "seq4": seq4_meta,
+        "seq5": seq5_meta,
+        "seq6": seq6_meta,
+        "seq7": seq7_meta,
+        "seq8": seq8_meta,
+    }
 
     pixel_to_class = {
         0: sly.ObjClass("void", sly.Bitmap, color=(128, 128, 128)),
@@ -137,7 +152,18 @@ def convert_and_upload_supervisely_project(
     }
 
     meta = sly.ProjectMeta(
-        tag_metas=[subfolder_meta, patient1_meta, patient2_meta],
+        tag_metas=[
+            patient1_meta,
+            patient2_meta,
+            seq1_meta,
+            seq2_meta,
+            seq3_meta,
+            seq4_meta,
+            seq5_meta,
+            seq6_meta,
+            seq7_meta,
+            seq8_meta,
+        ],
         obj_classes=list(pixel_to_class.values()),
     )
 

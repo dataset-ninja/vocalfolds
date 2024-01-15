@@ -24,7 +24,7 @@ LICENSE: License = License.CC_BY_4_0(
     source_url="https://github.com/imesluh/vocalfolds/blob/master/LICENSE"
 )
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Medical(), Industry.Robotics()]
-CATEGORY: Category = Category.Medical()
+CATEGORY: Category = Category.Medical(sensitive_content=True)
 
 CV_TASKS: List[CVTask] = [CVTask.SemanticSegmentation()]
 ANNOTATION_TYPES: List[AnnotationType] = [
@@ -39,7 +39,7 @@ if RELEASE_DATE is None:
 HOMEPAGE_URL: str = "https://github.com/imesluh/vocalfolds"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = 12533848
+PREVIEW_IMAGE_ID: int = 12664329
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
 GITHUB_URL: str = "https://github.com/dataset-ninja/vocalfolds"
@@ -76,7 +76,7 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://microralp.eu/index.
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
-    "__PRETEXT__": "Additionally, each image contains information about its ***sequence*** and ***patient*** number. Explore it in supervisely supervisely labeling tool"
+    "__PRETEXT__": "Additionally, each image contains information about its ***sequence*** and ***patient*** number. Explore it in supervisely labeling tool"
 }
 TAGS: Optional[List[str]] = None
 
