@@ -76,7 +76,7 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://microralp.eu/index.
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
-    "__PRETEXT__": "Additionally, each image contains information about its sequence(***seq1***, ***seq2***,***seq3***,***seq4***,***seq5***,***seq6***,***seq7***,***seq8*** tags) and ***patient*** number. Explore it in supervisely labeling tool"
+    "__PRETEXT__": "Additionally, each image contains information about its sequence(***seq1***, ***seq2***, ***seq3***, ***seq4***, ***seq5***, ***seq6***, ***seq7***, ***seq8*** tags) and ***patient1*** or ***patient2*** number. Explore it in supervisely labeling tool"
 }
 TAGS: Optional[List[str]] = None
 
